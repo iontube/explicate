@@ -1,20 +1,36 @@
 @import "tailwindcss";
 
-/* --- Fonts: DM Sans + Space Grotesk (via Google CDN, diferit de cuanimale) --- */
+/* --- Fonts: DM Sans + Space Grotesk (self-hosted) --- */
 @font-face {
   font-family: 'DM Sans';
   font-style: normal;
-  font-weight: 400 700;
+  font-weight: 400;
   font-display: swap;
-  src: url('https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwA.woff2') format('woff2');
+  src: url('/fonts/dm-sans-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/dm-sans-700.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Space Grotesk';
   font-style: normal;
-  font-weight: 500 700;
+  font-weight: 500;
   font-display: swap;
-  src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2') format('woff2');
+  src: url('/fonts/space-grotesk-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/space-grotesk-700.woff2') format('woff2');
 }
 
 @theme {
