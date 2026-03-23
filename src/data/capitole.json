@@ -1,0 +1,990 @@
+[
+  {
+    "id": "matematica-aritmetica",
+    "slug": "aritmetica",
+    "nume": "Aritmetică",
+    "materieSlug": "matematica",
+    "materieNume": "Matematică",
+    "descriere": "Aritmetică - Matematică.",
+    "continut": [
+      "Aritmetică acoperă 103 teme din matematică."
+    ],
+    "metaTitle": "Aritmetică - Matematică | explicate.ro",
+    "metaDescription": "Explicații matematică."
+  },
+  {
+    "id": "matematica-algebra",
+    "slug": "algebra",
+    "nume": "Algebră",
+    "materieSlug": "matematica",
+    "materieNume": "Matematică",
+    "descriere": "Algebră - Matematică.",
+    "continut": [
+      "Algebră acoperă 362 teme din matematică."
+    ],
+    "metaTitle": "Algebră - Matematică | explicate.ro",
+    "metaDescription": "Explicații matematică."
+  },
+  {
+    "id": "matematica-geometrie",
+    "slug": "geometrie",
+    "nume": "Geometrie",
+    "materieSlug": "matematica",
+    "materieNume": "Matematică",
+    "descriere": "Geometrie - Matematică.",
+    "continut": [
+      "Geometrie acoperă 250 teme din matematică."
+    ],
+    "metaTitle": "Geometrie - Matematică | explicate.ro",
+    "metaDescription": "Explicații matematică."
+  },
+  {
+    "id": "matematica-analiza-matematica",
+    "slug": "analiza-matematica",
+    "nume": "Analiză matematică",
+    "materieSlug": "matematica",
+    "materieNume": "Matematică",
+    "descriere": "Analiză matematică - Matematică.",
+    "continut": [
+      "Analiză matematică acoperă 77 teme din matematică."
+    ],
+    "metaTitle": "Analiză matematică - Matematică | explicate.ro",
+    "metaDescription": "Explicații matematică."
+  },
+  {
+    "id": "matematica-trigonometrie",
+    "slug": "trigonometrie",
+    "nume": "Trigonometrie",
+    "materieSlug": "matematica",
+    "materieNume": "Matematică",
+    "descriere": "Trigonometrie - Matematică.",
+    "continut": [
+      "Trigonometrie acoperă 27 teme din matematică."
+    ],
+    "metaTitle": "Trigonometrie - Matematică | explicate.ro",
+    "metaDescription": "Explicații matematică."
+  },
+  {
+    "id": "matematica-probabilitati",
+    "slug": "probabilitati",
+    "nume": "Probabilități și statistică",
+    "materieSlug": "matematica",
+    "materieNume": "Matematică",
+    "descriere": "Probabilități și statistică - Matematică.",
+    "continut": [
+      "Probabilități și statistică acoperă 50 teme din matematică."
+    ],
+    "metaTitle": "Probabilități și statistică - Matematică | explicate.ro",
+    "metaDescription": "Explicații matematică."
+  },
+  {
+    "id": "matematica-diverse",
+    "slug": "diverse",
+    "nume": "Alte teme",
+    "materieSlug": "matematica",
+    "materieNume": "Matematică",
+    "descriere": "Alte teme.",
+    "continut": [
+      "Alte teme acoperă 462 teme din matematică."
+    ],
+    "metaTitle": "Alte teme - Matematică | explicate.ro",
+    "metaDescription": "Alte teme."
+  },
+  {
+    "id": "romana-gramatica",
+    "slug": "gramatica",
+    "nume": "Gramatică",
+    "materieSlug": "romana",
+    "materieNume": "Limba Română",
+    "descriere": "Gramatică - Limba Română.",
+    "continut": [
+      "Gramatică acoperă 659 teme din limba română."
+    ],
+    "metaTitle": "Gramatică - Limba Română | explicate.ro",
+    "metaDescription": "Explicații limba română."
+  },
+  {
+    "id": "romana-ortografie",
+    "slug": "ortografie",
+    "nume": "Ortografie",
+    "materieSlug": "romana",
+    "materieNume": "Limba Română",
+    "descriere": "Ortografie - Limba Română.",
+    "continut": [
+      "Ortografie acoperă 66 teme din limba română."
+    ],
+    "metaTitle": "Ortografie - Limba Română | explicate.ro",
+    "metaDescription": "Explicații limba română."
+  },
+  {
+    "id": "romana-literatura",
+    "slug": "literatura",
+    "nume": "Literatură",
+    "materieSlug": "romana",
+    "materieNume": "Limba Română",
+    "descriere": "Literatură - Limba Română.",
+    "continut": [
+      "Literatură acoperă 33 teme din limba română."
+    ],
+    "metaTitle": "Literatură - Limba Română | explicate.ro",
+    "metaDescription": "Explicații limba română."
+  },
+  {
+    "id": "romana-compuneri",
+    "slug": "compuneri",
+    "nume": "Compuneri",
+    "materieSlug": "romana",
+    "materieNume": "Limba Română",
+    "descriere": "Compuneri - Limba Română.",
+    "continut": [
+      "Compuneri acoperă 85 teme din limba română."
+    ],
+    "metaTitle": "Compuneri - Limba Română | explicate.ro",
+    "metaDescription": "Explicații limba română."
+  },
+  {
+    "id": "romana-analiza-literara",
+    "slug": "analiza-literara",
+    "nume": "Analiză literară",
+    "materieSlug": "romana",
+    "materieNume": "Limba Română",
+    "descriere": "Analiză literară - Limba Română.",
+    "continut": [
+      "Analiză literară acoperă 53 teme din limba română."
+    ],
+    "metaTitle": "Analiză literară - Limba Română | explicate.ro",
+    "metaDescription": "Explicații limba română."
+  },
+  {
+    "id": "romana-vocabular",
+    "slug": "vocabular",
+    "nume": "Vocabular",
+    "materieSlug": "romana",
+    "materieNume": "Limba Română",
+    "descriere": "Vocabular - Limba Română.",
+    "continut": [
+      "Vocabular acoperă 80 teme din limba română."
+    ],
+    "metaTitle": "Vocabular - Limba Română | explicate.ro",
+    "metaDescription": "Explicații limba română."
+  },
+  {
+    "id": "romana-diverse",
+    "slug": "diverse",
+    "nume": "Alte teme",
+    "materieSlug": "romana",
+    "materieNume": "Limba Română",
+    "descriere": "Alte teme.",
+    "continut": [
+      "Alte teme acoperă 401 teme din limba română."
+    ],
+    "metaTitle": "Alte teme - Limba Română | explicate.ro",
+    "metaDescription": "Alte teme."
+  },
+  {
+    "id": "fizica-mecanica",
+    "slug": "mecanica",
+    "nume": "Mecanică",
+    "materieSlug": "fizica",
+    "materieNume": "Fizică",
+    "descriere": "Mecanică - Fizică.",
+    "continut": [
+      "Mecanică acoperă 231 teme din fizică."
+    ],
+    "metaTitle": "Mecanică - Fizică | explicate.ro",
+    "metaDescription": "Explicații fizică."
+  },
+  {
+    "id": "fizica-termodinamica",
+    "slug": "termodinamica",
+    "nume": "Termodinamică",
+    "materieSlug": "fizica",
+    "materieNume": "Fizică",
+    "descriere": "Termodinamică - Fizică.",
+    "continut": [
+      "Termodinamică acoperă 77 teme din fizică."
+    ],
+    "metaTitle": "Termodinamică - Fizică | explicate.ro",
+    "metaDescription": "Explicații fizică."
+  },
+  {
+    "id": "fizica-electricitate",
+    "slug": "electricitate",
+    "nume": "Electricitate",
+    "materieSlug": "fizica",
+    "materieNume": "Fizică",
+    "descriere": "Electricitate - Fizică.",
+    "continut": [
+      "Electricitate acoperă 114 teme din fizică."
+    ],
+    "metaTitle": "Electricitate - Fizică | explicate.ro",
+    "metaDescription": "Explicații fizică."
+  },
+  {
+    "id": "fizica-optica",
+    "slug": "optica",
+    "nume": "Optică",
+    "materieSlug": "fizica",
+    "materieNume": "Fizică",
+    "descriere": "Optică - Fizică.",
+    "continut": [
+      "Optică acoperă 91 teme din fizică."
+    ],
+    "metaTitle": "Optică - Fizică | explicate.ro",
+    "metaDescription": "Explicații fizică."
+  },
+  {
+    "id": "fizica-fizica-nucleara",
+    "slug": "fizica-nucleara",
+    "nume": "Fizică nucleară",
+    "materieSlug": "fizica",
+    "materieNume": "Fizică",
+    "descriere": "Fizică nucleară - Fizică.",
+    "continut": [
+      "Fizică nucleară acoperă 69 teme din fizică."
+    ],
+    "metaTitle": "Fizică nucleară - Fizică | explicate.ro",
+    "metaDescription": "Explicații fizică."
+  },
+  {
+    "id": "fizica-unde",
+    "slug": "unde",
+    "nume": "Unde și oscilații",
+    "materieSlug": "fizica",
+    "materieNume": "Fizică",
+    "descriere": "Unde și oscilații - Fizică.",
+    "continut": [
+      "Unde și oscilații acoperă 53 teme din fizică."
+    ],
+    "metaTitle": "Unde și oscilații - Fizică | explicate.ro",
+    "metaDescription": "Explicații fizică."
+  },
+  {
+    "id": "fizica-diverse",
+    "slug": "diverse",
+    "nume": "Alte teme",
+    "materieSlug": "fizica",
+    "materieNume": "Fizică",
+    "descriere": "Alte teme.",
+    "continut": [
+      "Alte teme acoperă 606 teme din fizică."
+    ],
+    "metaTitle": "Alte teme - Fizică | explicate.ro",
+    "metaDescription": "Alte teme."
+  },
+  {
+    "id": "chimie-chimie-generala",
+    "slug": "chimie-generala",
+    "nume": "Chimie generală",
+    "materieSlug": "chimie",
+    "materieNume": "Chimie",
+    "descriere": "Chimie generală - Chimie.",
+    "continut": [
+      "Chimie generală acoperă 116 teme din chimie."
+    ],
+    "metaTitle": "Chimie generală - Chimie | explicate.ro",
+    "metaDescription": "Explicații chimie."
+  },
+  {
+    "id": "chimie-chimie-organica",
+    "slug": "chimie-organica",
+    "nume": "Chimie organică",
+    "materieSlug": "chimie",
+    "materieNume": "Chimie",
+    "descriere": "Chimie organică - Chimie.",
+    "continut": [
+      "Chimie organică acoperă 223 teme din chimie."
+    ],
+    "metaTitle": "Chimie organică - Chimie | explicate.ro",
+    "metaDescription": "Explicații chimie."
+  },
+  {
+    "id": "chimie-chimie-anorganica",
+    "slug": "chimie-anorganica",
+    "nume": "Chimie anorganică",
+    "materieSlug": "chimie",
+    "materieNume": "Chimie",
+    "descriere": "Chimie anorganică - Chimie.",
+    "continut": [
+      "Chimie anorganică acoperă 132 teme din chimie."
+    ],
+    "metaTitle": "Chimie anorganică - Chimie | explicate.ro",
+    "metaDescription": "Explicații chimie."
+  },
+  {
+    "id": "chimie-reactii-chimice",
+    "slug": "reactii-chimice",
+    "nume": "Reacții chimice",
+    "materieSlug": "chimie",
+    "materieNume": "Chimie",
+    "descriere": "Reacții chimice - Chimie.",
+    "continut": [
+      "Reacții chimice acoperă 185 teme din chimie."
+    ],
+    "metaTitle": "Reacții chimice - Chimie | explicate.ro",
+    "metaDescription": "Explicații chimie."
+  },
+  {
+    "id": "chimie-tabelul-periodic",
+    "slug": "tabelul-periodic",
+    "nume": "Tabelul periodic",
+    "materieSlug": "chimie",
+    "materieNume": "Chimie",
+    "descriere": "Tabelul periodic - Chimie.",
+    "continut": [
+      "Tabelul periodic acoperă 30 teme din chimie."
+    ],
+    "metaTitle": "Tabelul periodic - Chimie | explicate.ro",
+    "metaDescription": "Explicații chimie."
+  },
+  {
+    "id": "chimie-biochimie",
+    "slug": "biochimie",
+    "nume": "Biochimie",
+    "materieSlug": "chimie",
+    "materieNume": "Chimie",
+    "descriere": "Biochimie - Chimie.",
+    "continut": [
+      "Biochimie acoperă 39 teme din chimie."
+    ],
+    "metaTitle": "Biochimie - Chimie | explicate.ro",
+    "metaDescription": "Explicații chimie."
+  },
+  {
+    "id": "chimie-diverse",
+    "slug": "diverse",
+    "nume": "Alte teme",
+    "materieSlug": "chimie",
+    "materieNume": "Chimie",
+    "descriere": "Alte teme.",
+    "continut": [
+      "Alte teme acoperă 630 teme din chimie."
+    ],
+    "metaTitle": "Alte teme - Chimie | explicate.ro",
+    "metaDescription": "Alte teme."
+  },
+  {
+    "id": "biologie-celula",
+    "slug": "celula",
+    "nume": "Celula",
+    "materieSlug": "biologie",
+    "materieNume": "Biologie",
+    "descriere": "Celula - Biologie.",
+    "continut": [
+      "Celula acoperă 82 teme din biologie."
+    ],
+    "metaTitle": "Celula - Biologie | explicate.ro",
+    "metaDescription": "Explicații biologie."
+  },
+  {
+    "id": "biologie-genetica",
+    "slug": "genetica",
+    "nume": "Genetică",
+    "materieSlug": "biologie",
+    "materieNume": "Biologie",
+    "descriere": "Genetică - Biologie.",
+    "continut": [
+      "Genetică acoperă 182 teme din biologie."
+    ],
+    "metaTitle": "Genetică - Biologie | explicate.ro",
+    "metaDescription": "Explicații biologie."
+  },
+  {
+    "id": "biologie-anatomie",
+    "slug": "anatomie",
+    "nume": "Anatomie",
+    "materieSlug": "biologie",
+    "materieNume": "Biologie",
+    "descriere": "Anatomie - Biologie.",
+    "continut": [
+      "Anatomie acoperă 287 teme din biologie."
+    ],
+    "metaTitle": "Anatomie - Biologie | explicate.ro",
+    "metaDescription": "Explicații biologie."
+  },
+  {
+    "id": "biologie-ecologie",
+    "slug": "ecologie",
+    "nume": "Ecologie",
+    "materieSlug": "biologie",
+    "materieNume": "Biologie",
+    "descriere": "Ecologie - Biologie.",
+    "continut": [
+      "Ecologie acoperă 64 teme din biologie."
+    ],
+    "metaTitle": "Ecologie - Biologie | explicate.ro",
+    "metaDescription": "Explicații biologie."
+  },
+  {
+    "id": "biologie-evolutie",
+    "slug": "evolutie",
+    "nume": "Evoluție",
+    "materieSlug": "biologie",
+    "materieNume": "Biologie",
+    "descriere": "Evoluție - Biologie.",
+    "continut": [
+      "Evoluție acoperă 13 teme din biologie."
+    ],
+    "metaTitle": "Evoluție - Biologie | explicate.ro",
+    "metaDescription": "Explicații biologie."
+  },
+  {
+    "id": "biologie-botanica",
+    "slug": "botanica",
+    "nume": "Botanică",
+    "materieSlug": "biologie",
+    "materieNume": "Biologie",
+    "descriere": "Botanică - Biologie.",
+    "continut": [
+      "Botanică acoperă 40 teme din biologie."
+    ],
+    "metaTitle": "Botanică - Biologie | explicate.ro",
+    "metaDescription": "Explicații biologie."
+  },
+  {
+    "id": "biologie-diverse",
+    "slug": "diverse",
+    "nume": "Alte teme",
+    "materieSlug": "biologie",
+    "materieNume": "Biologie",
+    "descriere": "Alte teme.",
+    "continut": [
+      "Alte teme acoperă 740 teme din biologie."
+    ],
+    "metaTitle": "Alte teme - Biologie | explicate.ro",
+    "metaDescription": "Alte teme."
+  },
+  {
+    "id": "istorie-istoria-romaniei",
+    "slug": "istoria-romaniei",
+    "nume": "Istoria României",
+    "materieSlug": "istorie",
+    "materieNume": "Istorie",
+    "descriere": "Istoria României - Istorie.",
+    "continut": [
+      "Istoria României acoperă 513 teme din istorie."
+    ],
+    "metaTitle": "Istoria României - Istorie | explicate.ro",
+    "metaDescription": "Explicații istorie."
+  },
+  {
+    "id": "istorie-istoria-universala",
+    "slug": "istoria-universala",
+    "nume": "Istoria universală",
+    "materieSlug": "istorie",
+    "materieNume": "Istorie",
+    "descriere": "Istoria universală - Istorie.",
+    "continut": [
+      "Istoria universală acoperă 127 teme din istorie."
+    ],
+    "metaTitle": "Istoria universală - Istorie | explicate.ro",
+    "metaDescription": "Explicații istorie."
+  },
+  {
+    "id": "istorie-razboaie",
+    "slug": "razboaie",
+    "nume": "Războaie",
+    "materieSlug": "istorie",
+    "materieNume": "Istorie",
+    "descriere": "Războaie - Istorie.",
+    "continut": [
+      "Războaie acoperă 69 teme din istorie."
+    ],
+    "metaTitle": "Războaie - Istorie | explicate.ro",
+    "metaDescription": "Explicații istorie."
+  },
+  {
+    "id": "istorie-personalitati",
+    "slug": "personalitati",
+    "nume": "Personalități",
+    "materieSlug": "istorie",
+    "materieNume": "Istorie",
+    "descriere": "Personalități - Istorie.",
+    "continut": [
+      "Personalități acoperă 20 teme din istorie."
+    ],
+    "metaTitle": "Personalități - Istorie | explicate.ro",
+    "metaDescription": "Explicații istorie."
+  },
+  {
+    "id": "istorie-revolutii",
+    "slug": "revolutii",
+    "nume": "Revoluții",
+    "materieSlug": "istorie",
+    "materieNume": "Istorie",
+    "descriere": "Revoluții - Istorie.",
+    "continut": [
+      "Revoluții acoperă 3 teme din istorie."
+    ],
+    "metaTitle": "Revoluții - Istorie | explicate.ro",
+    "metaDescription": "Explicații istorie."
+  },
+  {
+    "id": "istorie-civilizatii-antice",
+    "slug": "civilizatii-antice",
+    "nume": "Civilizații antice",
+    "materieSlug": "istorie",
+    "materieNume": "Istorie",
+    "descriere": "Civilizații antice - Istorie.",
+    "continut": [
+      "Civilizații antice acoperă 46 teme din istorie."
+    ],
+    "metaTitle": "Civilizații antice - Istorie | explicate.ro",
+    "metaDescription": "Explicații istorie."
+  },
+  {
+    "id": "istorie-diverse",
+    "slug": "diverse",
+    "nume": "Alte teme",
+    "materieSlug": "istorie",
+    "materieNume": "Istorie",
+    "descriere": "Alte teme.",
+    "continut": [
+      "Alte teme acoperă 628 teme din istorie."
+    ],
+    "metaTitle": "Alte teme - Istorie | explicate.ro",
+    "metaDescription": "Alte teme."
+  },
+  {
+    "id": "geografie-geografia-romaniei",
+    "slug": "geografia-romaniei",
+    "nume": "Geografia României",
+    "materieSlug": "geografie",
+    "materieNume": "Geografie",
+    "descriere": "Geografia României - Geografie.",
+    "continut": [
+      "Geografia României acoperă 251 teme din geografie."
+    ],
+    "metaTitle": "Geografia României - Geografie | explicate.ro",
+    "metaDescription": "Explicații geografie."
+  },
+  {
+    "id": "geografie-continente",
+    "slug": "continente",
+    "nume": "Continente",
+    "materieSlug": "geografie",
+    "materieNume": "Geografie",
+    "descriere": "Continente - Geografie.",
+    "continut": [
+      "Continente acoperă 56 teme din geografie."
+    ],
+    "metaTitle": "Continente - Geografie | explicate.ro",
+    "metaDescription": "Explicații geografie."
+  },
+  {
+    "id": "geografie-clima",
+    "slug": "clima",
+    "nume": "Climă și vegetație",
+    "materieSlug": "geografie",
+    "materieNume": "Geografie",
+    "descriere": "Climă și vegetație - Geografie.",
+    "continut": [
+      "Climă și vegetație acoperă 109 teme din geografie."
+    ],
+    "metaTitle": "Climă și vegetație - Geografie | explicate.ro",
+    "metaDescription": "Explicații geografie."
+  },
+  {
+    "id": "geografie-relief",
+    "slug": "relief",
+    "nume": "Relief",
+    "materieSlug": "geografie",
+    "materieNume": "Geografie",
+    "descriere": "Relief - Geografie.",
+    "continut": [
+      "Relief acoperă 46 teme din geografie."
+    ],
+    "metaTitle": "Relief - Geografie | explicate.ro",
+    "metaDescription": "Explicații geografie."
+  },
+  {
+    "id": "geografie-geografie-economica",
+    "slug": "geografie-economica",
+    "nume": "Geografie economică",
+    "materieSlug": "geografie",
+    "materieNume": "Geografie",
+    "descriere": "Geografie economică - Geografie.",
+    "continut": [
+      "Geografie economică acoperă 151 teme din geografie."
+    ],
+    "metaTitle": "Geografie economică - Geografie | explicate.ro",
+    "metaDescription": "Explicații geografie."
+  },
+  {
+    "id": "geografie-hidrografie",
+    "slug": "hidrografie",
+    "nume": "Hidrografie",
+    "materieSlug": "geografie",
+    "materieNume": "Geografie",
+    "descriere": "Hidrografie - Geografie.",
+    "continut": [
+      "Hidrografie acoperă 90 teme din geografie."
+    ],
+    "metaTitle": "Hidrografie - Geografie | explicate.ro",
+    "metaDescription": "Explicații geografie."
+  },
+  {
+    "id": "geografie-diverse",
+    "slug": "diverse",
+    "nume": "Alte teme",
+    "materieSlug": "geografie",
+    "materieNume": "Geografie",
+    "descriere": "Alte teme.",
+    "continut": [
+      "Alte teme acoperă 737 teme din geografie."
+    ],
+    "metaTitle": "Alte teme - Geografie | explicate.ro",
+    "metaDescription": "Alte teme."
+  },
+  {
+    "id": "informatica-programare",
+    "slug": "programare",
+    "nume": "Programare",
+    "materieSlug": "informatica",
+    "materieNume": "Informatică",
+    "descriere": "Programare - Informatică.",
+    "continut": [
+      "Programare acoperă 418 teme din informatică."
+    ],
+    "metaTitle": "Programare - Informatică | explicate.ro",
+    "metaDescription": "Explicații informatică."
+  },
+  {
+    "id": "informatica-algoritmi",
+    "slug": "algoritmi",
+    "nume": "Algoritmi",
+    "materieSlug": "informatica",
+    "materieNume": "Informatică",
+    "descriere": "Algoritmi - Informatică.",
+    "continut": [
+      "Algoritmi acoperă 120 teme din informatică."
+    ],
+    "metaTitle": "Algoritmi - Informatică | explicate.ro",
+    "metaDescription": "Explicații informatică."
+  },
+  {
+    "id": "informatica-baze-de-date",
+    "slug": "baze-de-date",
+    "nume": "Baze de date",
+    "materieSlug": "informatica",
+    "materieNume": "Informatică",
+    "descriere": "Baze de date - Informatică.",
+    "continut": [
+      "Baze de date acoperă 84 teme din informatică."
+    ],
+    "metaTitle": "Baze de date - Informatică | explicate.ro",
+    "metaDescription": "Explicații informatică."
+  },
+  {
+    "id": "informatica-retele",
+    "slug": "retele",
+    "nume": "Rețele",
+    "materieSlug": "informatica",
+    "materieNume": "Informatică",
+    "descriere": "Rețele - Informatică.",
+    "continut": [
+      "Rețele acoperă 144 teme din informatică."
+    ],
+    "metaTitle": "Rețele - Informatică | explicate.ro",
+    "metaDescription": "Explicații informatică."
+  },
+  {
+    "id": "informatica-sisteme-de-operare",
+    "slug": "sisteme-de-operare",
+    "nume": "Sisteme de operare",
+    "materieSlug": "informatica",
+    "materieNume": "Informatică",
+    "descriere": "Sisteme de operare - Informatică.",
+    "continut": [
+      "Sisteme de operare acoperă 118 teme din informatică."
+    ],
+    "metaTitle": "Sisteme de operare - Informatică | explicate.ro",
+    "metaDescription": "Explicații informatică."
+  },
+  {
+    "id": "informatica-web",
+    "slug": "web",
+    "nume": "Dezvoltare web",
+    "materieSlug": "informatica",
+    "materieNume": "Informatică",
+    "descriere": "Dezvoltare web - Informatică.",
+    "continut": [
+      "Dezvoltare web acoperă 63 teme din informatică."
+    ],
+    "metaTitle": "Dezvoltare web - Informatică | explicate.ro",
+    "metaDescription": "Explicații informatică."
+  },
+  {
+    "id": "informatica-diverse",
+    "slug": "diverse",
+    "nume": "Alte teme",
+    "materieSlug": "informatica",
+    "materieNume": "Informatică",
+    "descriere": "Alte teme.",
+    "continut": [
+      "Alte teme acoperă 378 teme din informatică."
+    ],
+    "metaTitle": "Alte teme - Informatică | explicate.ro",
+    "metaDescription": "Alte teme."
+  },
+  {
+    "id": "educatie-civica-diverse",
+    "slug": "diverse",
+    "nume": "Diverse",
+    "materieSlug": "educatie-civica",
+    "materieNume": "Educație Civică",
+    "descriere": "Alte teme de educație civică.",
+    "continut": [
+      "Diverse acoperă 1426 teme din educație civică."
+    ],
+    "metaTitle": "Diverse - Educație Civică | explicate.ro",
+    "metaDescription": "Alte teme de educație civică."
+  },
+  {
+    "id": "filosofie-diverse",
+    "slug": "diverse",
+    "nume": "Diverse",
+    "materieSlug": "filosofie",
+    "materieNume": "Filosofie",
+    "descriere": "Alte teme de filosofie.",
+    "continut": [
+      "Diverse acoperă 1435 teme din filosofie."
+    ],
+    "metaTitle": "Diverse - Filosofie | explicate.ro",
+    "metaDescription": "Alte teme de filosofie."
+  },
+  {
+    "id": "economie-diverse",
+    "slug": "diverse",
+    "nume": "Diverse",
+    "materieSlug": "economie",
+    "materieNume": "Economie",
+    "descriere": "Alte teme de economie.",
+    "continut": [
+      "Diverse acoperă 1367 teme din economie."
+    ],
+    "metaTitle": "Diverse - Economie | explicate.ro",
+    "metaDescription": "Alte teme de economie."
+  },
+  {
+    "id": "engleza-diverse",
+    "slug": "diverse",
+    "nume": "Diverse",
+    "materieSlug": "engleza",
+    "materieNume": "Limba Engleză",
+    "descriere": "Alte teme de limba engleză.",
+    "continut": [
+      "Diverse acoperă 1370 teme din limba engleză."
+    ],
+    "metaTitle": "Diverse - Limba Engleză | explicate.ro",
+    "metaDescription": "Alte teme de limba engleză."
+  },
+  {
+    "id": "educatie-civica-drepturi-si-libertati",
+    "slug": "drepturi-si-libertati",
+    "nume": "Drepturi și libertăți",
+    "materieSlug": "educatie-civica",
+    "materieNume": "Educație Civică",
+    "descriere": "Drepturile omului și libertățile cetățenești.",
+    "continut": [
+      "Drepturi și libertăți acoperă teme din educație civică. Drepturile omului și libertățile cetățenești."
+    ],
+    "metaTitle": "Drepturi și libertăți - Educație Civică | explicate.ro",
+    "metaDescription": "Drepturile omului și libertățile cetățenești."
+  },
+  {
+    "id": "educatie-civica-democratie-si-institutii",
+    "slug": "democratie-si-institutii",
+    "nume": "Democrație și instituții",
+    "materieSlug": "educatie-civica",
+    "materieNume": "Educație Civică",
+    "descriere": "Sistemul democratic, parlament, guvern, justiție.",
+    "continut": [
+      "Democrație și instituții acoperă teme din educație civică. Sistemul democratic, parlament, guvern, justiție."
+    ],
+    "metaTitle": "Democrație și instituții - Educație Civică | explicate.ro",
+    "metaDescription": "Sistemul democratic, parlament, guvern, justiție."
+  },
+  {
+    "id": "educatie-civica-valori-civice",
+    "slug": "valori-civice",
+    "nume": "Valori civice",
+    "materieSlug": "educatie-civica",
+    "materieNume": "Educație Civică",
+    "descriere": "Responsabilitate, toleranță, solidaritate, civism.",
+    "continut": [
+      "Valori civice acoperă teme din educație civică. Responsabilitate, toleranță, solidaritate, civism."
+    ],
+    "metaTitle": "Valori civice - Educație Civică | explicate.ro",
+    "metaDescription": "Responsabilitate, toleranță, solidaritate, civism."
+  },
+  {
+    "id": "educatie-civica-comunitate",
+    "slug": "comunitate",
+    "nume": "Comunitate și participare",
+    "materieSlug": "educatie-civica",
+    "materieNume": "Educație Civică",
+    "descriere": "Participare cetățenească, voluntariat.",
+    "continut": [
+      "Comunitate și participare acoperă teme din educație civică. Participare cetățenească, voluntariat."
+    ],
+    "metaTitle": "Comunitate și participare - Educație Civică | explicate.ro",
+    "metaDescription": "Participare cetățenească, voluntariat."
+  },
+  {
+    "id": "filosofie-introducere",
+    "slug": "introducere",
+    "nume": "Introducere în filosofie",
+    "materieSlug": "filosofie",
+    "materieNume": "Filosofie",
+    "descriere": "Ce este filosofia, ramurile filosofiei.",
+    "continut": [
+      "Introducere în filosofie acoperă teme din filosofie. Ce este filosofia, ramurile filosofiei."
+    ],
+    "metaTitle": "Introducere în filosofie - Filosofie | explicate.ro",
+    "metaDescription": "Ce este filosofia, ramurile filosofiei."
+  },
+  {
+    "id": "filosofie-filosofie-antica",
+    "slug": "filosofie-antica",
+    "nume": "Filosofie antică",
+    "materieSlug": "filosofie",
+    "materieNume": "Filosofie",
+    "descriere": "Socrate, Platon, Aristotel.",
+    "continut": [
+      "Filosofie antică acoperă teme din filosofie. Socrate, Platon, Aristotel."
+    ],
+    "metaTitle": "Filosofie antică - Filosofie | explicate.ro",
+    "metaDescription": "Socrate, Platon, Aristotel."
+  },
+  {
+    "id": "filosofie-filosofie-moderna",
+    "slug": "filosofie-moderna",
+    "nume": "Filosofie modernă",
+    "materieSlug": "filosofie",
+    "materieNume": "Filosofie",
+    "descriere": "Descartes, Kant, Hegel, iluminism.",
+    "continut": [
+      "Filosofie modernă acoperă teme din filosofie. Descartes, Kant, Hegel, iluminism."
+    ],
+    "metaTitle": "Filosofie modernă - Filosofie | explicate.ro",
+    "metaDescription": "Descartes, Kant, Hegel, iluminism."
+  },
+  {
+    "id": "filosofie-etica",
+    "slug": "etica",
+    "nume": "Etică",
+    "materieSlug": "filosofie",
+    "materieNume": "Filosofie",
+    "descriere": "Morală, bine și rău, teorii etice.",
+    "continut": [
+      "Etică acoperă teme din filosofie. Morală, bine și rău, teorii etice."
+    ],
+    "metaTitle": "Etică - Filosofie | explicate.ro",
+    "metaDescription": "Morală, bine și rău, teorii etice."
+  },
+  {
+    "id": "filosofie-logica",
+    "slug": "logica",
+    "nume": "Logică",
+    "materieSlug": "filosofie",
+    "materieNume": "Filosofie",
+    "descriere": "Raționament, silogism, argumente.",
+    "continut": [
+      "Logică acoperă teme din filosofie. Raționament, silogism, argumente."
+    ],
+    "metaTitle": "Logică - Filosofie | explicate.ro",
+    "metaDescription": "Raționament, silogism, argumente."
+  },
+  {
+    "id": "economie-microeconomie",
+    "slug": "microeconomie",
+    "nume": "Microeconomie",
+    "materieSlug": "economie",
+    "materieNume": "Economie",
+    "descriere": "Cerere, ofertă, piață, preț.",
+    "continut": [
+      "Microeconomie acoperă teme din economie. Cerere, ofertă, piață, preț."
+    ],
+    "metaTitle": "Microeconomie - Economie | explicate.ro",
+    "metaDescription": "Cerere, ofertă, piață, preț."
+  },
+  {
+    "id": "economie-macroeconomie",
+    "slug": "macroeconomie",
+    "nume": "Macroeconomie",
+    "materieSlug": "economie",
+    "materieNume": "Economie",
+    "descriere": "PIB, inflație, șomaj, politici economice.",
+    "continut": [
+      "Macroeconomie acoperă teme din economie. PIB, inflație, șomaj, politici economice."
+    ],
+    "metaTitle": "Macroeconomie - Economie | explicate.ro",
+    "metaDescription": "PIB, inflație, șomaj, politici economice."
+  },
+  {
+    "id": "economie-finante",
+    "slug": "finante",
+    "nume": "Finanțe",
+    "materieSlug": "economie",
+    "materieNume": "Economie",
+    "descriere": "Economisire, investiții, credite.",
+    "continut": [
+      "Finanțe acoperă teme din economie. Economisire, investiții, credite."
+    ],
+    "metaTitle": "Finanțe - Economie | explicate.ro",
+    "metaDescription": "Economisire, investiții, credite."
+  },
+  {
+    "id": "economie-afaceri",
+    "slug": "afaceri",
+    "nume": "Afaceri",
+    "materieSlug": "economie",
+    "materieNume": "Economie",
+    "descriere": "Antreprenoriat, management, marketing.",
+    "continut": [
+      "Afaceri acoperă teme din economie. Antreprenoriat, management, marketing."
+    ],
+    "metaTitle": "Afaceri - Economie | explicate.ro",
+    "metaDescription": "Antreprenoriat, management, marketing."
+  },
+  {
+    "id": "engleza-gramatica",
+    "slug": "gramatica",
+    "nume": "Grammar",
+    "materieSlug": "engleza",
+    "materieNume": "Limba Engleză",
+    "descriere": "Timpuri verbale, structuri gramaticale.",
+    "continut": [
+      "Grammar acoperă teme din limba engleză. Timpuri verbale, structuri gramaticale."
+    ],
+    "metaTitle": "Grammar - Limba Engleză | explicate.ro",
+    "metaDescription": "Timpuri verbale, structuri gramaticale."
+  },
+  {
+    "id": "engleza-vocabular",
+    "slug": "vocabular",
+    "nume": "Vocabulary",
+    "materieSlug": "engleza",
+    "materieNume": "Limba Engleză",
+    "descriere": "Cuvinte, expresii, idiomuri.",
+    "continut": [
+      "Vocabulary acoperă teme din limba engleză. Cuvinte, expresii, idiomuri."
+    ],
+    "metaTitle": "Vocabulary - Limba Engleză | explicate.ro",
+    "metaDescription": "Cuvinte, expresii, idiomuri."
+  },
+  {
+    "id": "engleza-exercitii",
+    "slug": "exercitii",
+    "nume": "Exerciții",
+    "materieSlug": "engleza",
+    "materieNume": "Limba Engleză",
+    "descriere": "Exerciții rezolvate și teste.",
+    "continut": [
+      "Exerciții acoperă teme din limba engleză. Exerciții rezolvate și teste."
+    ],
+    "metaTitle": "Exerciții - Limba Engleză | explicate.ro",
+    "metaDescription": "Exerciții rezolvate și teste."
+  }
+]

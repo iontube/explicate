@@ -1,0 +1,120 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SEOHead from '../../../components/SEOHead.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import { getAllArticole, getMaterieBySlug, getCapitolBySlug, getArticoleForCapitol } from '../../../helpers/data';
+import { buildArticleSchema, buildBreadcrumbSchema } from '../../../helpers/structured-data';
+import type { Articol } from '../../../helpers/types';
+
+export function getStaticPaths() {
+  return getAllArticole().map(a => ({
+    params: { materie: a.materieSlug, capitol: a.capitolSlug, articol: a.slug },
+    props: { articol: a },
+  }));
+}
+
+const { articol } = Astro.props as { articol: Articol };
+const materie = getMaterieBySlug(articol.materieSlug)!;
+const capitol = getCapitolBySlug(articol.materieSlug, articol.capitolSlug)!;
+const moreArticole = getArticoleForCapitol(articol.materieSlug, articol.capitolSlug)
+  .filter(a => a.slug !== articol.slug).slice(0, 5);
+
+const url = `/${articol.materieSlug}/${articol.capitolSlug}/${articol.slug}/`;
+---
+
+<Layout>
+  <SEOHead
+    slot="head"
+    title={articol.metaTitle}
+    description={articol.metaDescription}
+    canonical={url}
+    jsonLd={[
+      buildArticleSchema(articol, url),
+      buildBreadcrumbSchema([
+        { label: 'Acasă', href: '/' },
+        { label: materie.nume, href: `/${materie.slug}/` },
+        { label: capitol.nume, href: `/${materie.slug}/${capitol.slug}/` },
+        { label: articol.titlu },
+      ]),
+    ]}
+  />
+
+  <article class="wrap-sm py-8">
+    <Breadcrumb items={[
+      { label: materie.nume, href: `/${materie.slug}/` },
+      { label: capitol.nume, href: `/${materie.slug}/${capitol.slug}/` },
+      { label: articol.titlu },
+    ]} />
+
+    <header class="mb-8">
+      <div class="flex gap-2 mb-3">
+        <span class="pill pill-pri">{materie.nume}</span>
+        <span class="pill pill-acc">{capitol.nume}</span>
+      </div>
+      <h1 class="text-xl sm:text-2xl font-display font-bold text-gray-900 leading-snug">{articol.titlu}</h1>
+    </header>
+
+    <!-- Intro -->
+    <div class="content mb-8">
+      <p class="text-gray-700 text-base leading-relaxed">{articol.intro}</p>
+    </div>
+
+    <!-- Sections -->
+    {(articol.sectiuni || []).map(s => (
+      <section class="mb-8">
+        <h2 class="text-lg font-display font-bold text-gray-900 mb-3 pb-2 border-b border-gray-100">{s.titlu}</h2>
+        {s.tip === 'pasi' ? (
+          <ol class="space-y-3">
+            {(s.items || []).map((item, i) => (
+              <li class="flex gap-3">
+                <span class="shrink-0 w-6 h-6 rounded-md bg-pri-100 text-pri-700 text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
+                <div class="text-gray-700 text-[15px]">
+                  {item.titlu && <strong class="text-gray-900 block mb-0.5">{item.titlu}</strong>}
+                  <span>{item.text}</span>
+                </div>
+              </li>
+            ))}
+          </ol>
+        ) : s.tip === 'lista' ? (
+          <ul class="space-y-2.5">
+            {(s.items || []).map(item => (
+              <li class="flex gap-3">
+                <span class="shrink-0 w-1 h-1 rounded-full bg-pri-400 mt-2.5"></span>
+                <div class="text-gray-700 text-[15px]">
+                  {item.titlu && <strong class="text-gray-900 block mb-0.5">{item.titlu}</strong>}
+                  <span>{item.text}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div class="content">
+            {(s.items || []).map(item => <p>{item.text}</p>)}
+          </div>
+        )}
+      </section>
+    ))}
+
+    <!-- Conclusion -->
+    <div class="infobox mb-10">
+      <p>{articol.concluzie}</p>
+    </div>
+
+    <!-- More from chapter -->
+    {moreArticole.length > 0 && (
+      <section class="pt-8 border-t border-gray-100">
+        <h2 class="text-sm font-display font-semibold text-gray-400 uppercase tracking-wider mb-4">Mai multe din {capitol.nume}</h2>
+        <div class="space-y-1.5">
+          {moreArticole.map(a => (
+            <a href={`/${a.materieSlug}/${a.capitolSlug}/${a.slug}/`} class="group flex items-center justify-between py-2 px-3 -mx-3 rounded-md no-underline hover:bg-gray-50 transition-colors">
+              <span class="text-sm text-gray-700 group-hover:text-pri-600">{a.titlu}</span>
+              <svg class="w-3.5 h-3.5 text-gray-300 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
+</Layout>

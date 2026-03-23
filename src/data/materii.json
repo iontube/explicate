@@ -1,0 +1,285 @@
+[
+  {
+    "id": "matematica",
+    "slug": "matematica",
+    "nume": "Matematică",
+    "emoji": "matematica",
+    "descriere": "Matematica stă la baza tuturor științelor exacte. De la calculul mental de zi cu zi până la ecuațiil...",
+    "subcategorii": [
+      "aritmetica",
+      "algebra",
+      "geometrie",
+      "analiza-matematica",
+      "trigonometrie",
+      "probabilitati",
+      "diverse"
+    ],
+    "metaTitle": "Matematică - Explicații | explicate.ro",
+    "metaDescription": "Explicații de matematică cu exemple practice.",
+    "continut": [
+      "Matematica stă la baza tuturor științelor exacte. De la calculul mental de zi cu zi până la ecuațiile care descriu universul, totul se construiește pe aceleași principii logice.",
+      "Această pagină acoperă toate capitolele de matematică din programa școlară: aritmetică, algebră, geometrie, analiză matematică, trigonometrie și statistică.",
+      "Fiecare explicație pornește de la întrebarea concretă pe care o ai și oferă răspunsul direct, cu pași de rezolvare și exemple.",
+      "Nu contează dacă ești în clasa a 5-a sau pregătești bacalaureatul. Explicațiile sunt scrise clar, cu accent pe înțelegere."
+    ]
+  },
+  {
+    "id": "romana",
+    "slug": "romana",
+    "nume": "Limba Română",
+    "emoji": "romana",
+    "descriere": "Limba română e materia pe care o folosim zilnic dar pe care puțini o înțeleg cu adevărat. Între a vo...",
+    "subcategorii": [
+      "gramatica",
+      "ortografie",
+      "literatura",
+      "compuneri",
+      "analiza-literara",
+      "vocabular",
+      "diverse"
+    ],
+    "metaTitle": "Limba Română - Explicații | explicate.ro",
+    "metaDescription": "Explicații de limba română cu exemple practice.",
+    "continut": [
+      "Limba română e materia pe care o folosim zilnic dar pe care puțini o înțeleg cu adevărat. Între a vorbi corect și a ști de ce e corect e o diferență mare.",
+      "Gramatică, ortografie, literatură, compuneri și analiză literară - fiecare subiect e explicat cu exemple din texte reale.",
+      "Secțiunea de literatură acoperă toți autorii și operele din programă, cu analize care merg dincolo de rezumat.",
+      "Fie că pregătești evaluarea națională sau bacalaureatul, aici găsești explicații aplicabile imediat."
+    ]
+  },
+  {
+    "id": "fizica",
+    "slug": "fizica",
+    "nume": "Fizică",
+    "emoji": "fizica",
+    "descriere": "Fizica răspunde la cele mai fundamentale întrebări despre lumea din jurul nostru: de ce cade un obie...",
+    "subcategorii": [
+      "mecanica",
+      "termodinamica",
+      "electricitate",
+      "optica",
+      "fizica-nucleara",
+      "unde",
+      "diverse"
+    ],
+    "metaTitle": "Fizică - Explicații | explicate.ro",
+    "metaDescription": "Explicații de fizică cu exemple practice.",
+    "continut": [
+      "Fizica răspunde la cele mai fundamentale întrebări despre lumea din jurul nostru: de ce cade un obiect, cum funcționează curentul electric, ce este lumina, de ce e cerul albastru.",
+      "Formulele sunt explicate pas cu pas, cu semnificația fiecărui termen și exemple numerice din situații reale. Nu memorezi formule, ci înțelegi de unde vin.",
+      "Mecanica, termodinamica, electricitatea, optica și fizica nucleară - fiecare capitol construiește pe cel anterior. Dacă nu înțelegi cinematica, dinamica va fi imposibilă.",
+      "Fizica de liceu se construiește progresiv. De aceea articolele sunt organizate logic, de la simplu la complex, în cadrul fiecărui capitol."
+    ]
+  },
+  {
+    "id": "chimie",
+    "slug": "chimie",
+    "nume": "Chimie",
+    "emoji": "chimie",
+    "descriere": "Chimia explică din ce e făcută materia și cum interacționează substanțele. De la atom la reacții com...",
+    "subcategorii": [
+      "chimie-generala",
+      "chimie-organica",
+      "chimie-anorganica",
+      "reactii-chimice",
+      "tabelul-periodic",
+      "biochimie",
+      "diverse"
+    ],
+    "metaTitle": "Chimie - Explicații | explicate.ro",
+    "metaDescription": "Explicații de chimie cu exemple practice.",
+    "continut": [
+      "Chimia explică din ce e făcută materia și cum interacționează substanțele între ele. E materia care face legătura între fizică și biologie.",
+      "De la structura atomului la reacții organice complexe, fiecare concept e explicat cu ecuații scrise corect și pași de rezolvare clari.",
+      "Echilibrarea ecuațiilor chimice, calculul stoechiometric, tipurile de reacții - toate cu metode pe care le poți replica singur.",
+      "Tabelul periodic nu e doar un poster. Fiecare element are proprietăți predictibile pe care le poți înțelege prin structura electronică."
+    ]
+  },
+  {
+    "id": "biologie",
+    "slug": "biologie",
+    "nume": "Biologie",
+    "emoji": "biologie",
+    "descriere": "Biologia studiază viața de la nivel celular la ecosisteme. Cum funcționează ADN-ul, cum respiră o ce...",
+    "subcategorii": [
+      "celula",
+      "genetica",
+      "anatomie",
+      "ecologie",
+      "evolutie",
+      "botanica",
+      "diverse"
+    ],
+    "metaTitle": "Biologie - Explicații | explicate.ro",
+    "metaDescription": "Explicații de biologie cu exemple practice.",
+    "continut": [
+      "Biologia studiază viața de la nivel celular la ecosisteme. Cum funcționează ADN-ul, cum respiră o celulă, cum circulă sângele, cum evoluează speciile.",
+      "Anatomia, genetica, ecologia și evoluția sunt prezentate cu explicații clare și conexiuni între concepte. Fiecare sistem al corpului e legat de celelalte.",
+      "Fotosinteza, respirația celulară, mitoza, meioza - procese fundamentale explicate cu diagrame mentale, nu doar cu definiții de memorat.",
+      "De la celulă la ecosistem, biologia arată cum funcționează viața la fiecare nivel de organizare."
+    ]
+  },
+  {
+    "id": "istorie",
+    "slug": "istorie",
+    "nume": "Istorie",
+    "emoji": "istorie",
+    "descriere": "Istoria nu e o listă de date. E povestea a cum am ajuns unde suntem - fiecare eveniment are cauze și...",
+    "subcategorii": [
+      "istoria-romaniei",
+      "istoria-universala",
+      "razboaie",
+      "personalitati",
+      "revolutii",
+      "civilizatii-antice",
+      "diverse"
+    ],
+    "metaTitle": "Istorie - Explicații | explicate.ro",
+    "metaDescription": "Explicații de istorie cu exemple practice.",
+    "continut": [
+      "Istoria nu e o listă de date. E povestea a cum am ajuns unde suntem - fiecare eveniment are cauze și consecințe pe termen lung.",
+      "Istoria României de la daci și romani la revoluția din 1989 și integrarea europeană. Istoria universală de la civilizațiile antice la Războiul Rece.",
+      "Fiecare articol explică nu doar ce s-a întâmplat, ci de ce s-a întâmplat. Ce cauze au dus la un conflict, ce consecințe a avut o revoluție.",
+      "Personalitățile sunt plasate în contextul epocii lor. Războaiele sunt analizate prin cauze, desfășurare și impact pe termen lung."
+    ]
+  },
+  {
+    "id": "geografie",
+    "slug": "geografie",
+    "nume": "Geografie",
+    "emoji": "geografie",
+    "descriere": "Geografia explică de ce plouă mai mult în vest, de ce munții sunt mai înalți în unele zone și cum re...",
+    "subcategorii": [
+      "geografia-romaniei",
+      "continente",
+      "clima",
+      "relief",
+      "geografie-economica",
+      "hidrografie",
+      "diverse"
+    ],
+    "metaTitle": "Geografie - Explicații | explicate.ro",
+    "metaDescription": "Explicații de geografie cu exemple practice.",
+    "continut": [
+      "Geografia explică de ce plouă mai mult în vest, de ce munții sunt mai înalți în unele zone și cum resursele naturale influențează economia.",
+      "România cu Carpații, Dunărea și Delta, continentele lumii, clima, relieful și hidrografia - toate cu date concrete și explicații accesibile.",
+      "Geografia fizică se îmbină cu cea economică pentru a explica de ce anumite regiuni prosperă, cum schimbările climatice afectează agricultura.",
+      "Fiecare articol oferă date reale: altitudini, lungimi de râuri, suprafețe, populație. Nu generalități, ci informații pe care le poți folosi."
+    ]
+  },
+  {
+    "id": "informatica",
+    "slug": "informatica",
+    "nume": "Informatică",
+    "emoji": "informatica",
+    "descriere": "Informatica e limba în care funcționează lumea modernă. Programare, algoritmi, baze de date și rețel...",
+    "subcategorii": [
+      "programare",
+      "algoritmi",
+      "baze-de-date",
+      "retele",
+      "sisteme-de-operare",
+      "web",
+      "diverse"
+    ],
+    "metaTitle": "Informatică - Explicații | explicate.ro",
+    "metaDescription": "Explicații de informatică cu exemple practice.",
+    "continut": [
+      "Informatica e limba în care funcționează lumea modernă. Programare, algoritmi, baze de date și rețele - conceptele fundamentale din spatele oricărei tehnologii.",
+      "Explicațiile de programare sunt în C++ și Python, limbajele cele mai folosite în programa românească. Fiecare concept include cod funcțional.",
+      "Algoritmii sunt prezentați vizual: cum funcționează pas cu pas, ce complexitate au și când îi folosești.",
+      "De la variabile și funcții la grafuri și programare dinamică, fiecare subiect e explicat practic, nu academic."
+    ]
+  },
+  {
+    "id": "educatie-civica",
+    "slug": "educatie-civica",
+    "nume": "Educație Civică",
+    "emoji": "educatie-civica",
+    "descriere": "Educația civică te învață cum funcționează societatea: drepturi, responsabilități, instituții, democ...",
+    "subcategorii": [
+      "drepturi-si-libertati",
+      "democratie-si-institutii",
+      "valori-civice",
+      "comunitate-si-participare",
+      "constitutie-si-legi",
+      "diverse"
+    ],
+    "metaTitle": "Educație Civică - Explicații | explicate.ro",
+    "metaDescription": "Explicații de educație civică cu exemple practice.",
+    "continut": [
+      "Educația civică te învață cum funcționează societatea: drepturi, responsabilități, instituții, democrație și participare cetățenească.",
+      "Constituția, drepturile omului, sistemul democratic, parlamentul, guvernul și justiția - mecanismele prin care societatea funcționează.",
+      "Pe această pagină acoperim drepturile fundamentale, democrația românească, valori civice și implicarea în comunitate.",
+      "Fiecare explicație folosește exemple din viața reală din România, nu teorie abstractă."
+    ]
+  },
+  {
+    "id": "filosofie",
+    "slug": "filosofie",
+    "nume": "Filosofie",
+    "emoji": "filosofie",
+    "descriere": "Filosofia pune întrebările fundamentale: ce este realitatea, ce este cunoașterea, ce este binele, ce...",
+    "subcategorii": [
+      "introducere",
+      "filosofie-antica",
+      "filosofie-moderna",
+      "etica",
+      "logica",
+      "diverse"
+    ],
+    "metaTitle": "Filosofie - Explicații | explicate.ro",
+    "metaDescription": "Explicații de filosofie cu exemple practice.",
+    "continut": [
+      "Filosofia pune întrebările pe care celelalte materii le iau de-a gata: ce este realitatea, ce putem cunoaște, ce e bine și ce e rău.",
+      "De la presocratici la filosofia modernă, fiecare curent a modelat modul în care înțelegem lumea. Socrate, Platon, Aristotel, Kant, Hegel.",
+      "Etica studiază ce e moral, logica te învață să argumentezi corect, epistemologia explorează limitele cunoașterii.",
+      "Filosofia nu trebuie să fie intimidantă. Fiecare idee e prezentată clar, fără jargon inutil."
+    ]
+  },
+  {
+    "id": "economie",
+    "slug": "economie",
+    "nume": "Economie",
+    "emoji": "economie",
+    "descriere": "Economia explică cum funcționează piețele, ce determină prețurile, de ce unele țări sunt bogate și c...",
+    "subcategorii": [
+      "microeconomie",
+      "macroeconomie",
+      "finante-personale",
+      "afaceri",
+      "economie-internationala",
+      "diverse"
+    ],
+    "metaTitle": "Economie - Explicații | explicate.ro",
+    "metaDescription": "Explicații de economie cu exemple practice.",
+    "continut": [
+      "Economia explică cum funcționează piețele, ce determină prețurile, de ce unele țări sunt bogate și cum iei decizii financiare informate.",
+      "Microeconomia studiază cererea, oferta, prețul, concurența. Macroeconomia privește PIB-ul, inflația, șomajul, politicile economice.",
+      "Finanțele personale - economisire, investiții, credite - sunt subiecte care te afectează toată viața.",
+      "Fiecare concept e explicat cu exemple din economia românească și globală, nu teorie abstractă."
+    ]
+  },
+  {
+    "id": "engleza",
+    "slug": "engleza",
+    "nume": "Limba Engleză",
+    "emoji": "engleza",
+    "descriere": "Limba engleză e cea mai utilă limbă străină pe care o poți învăța. Gramatică, vocabular, timpuri ver...",
+    "subcategorii": [
+      "gramatica",
+      "vocabular",
+      "conversatie",
+      "exercitii",
+      "diverse"
+    ],
+    "metaTitle": "Limba Engleză - Explicații | explicate.ro",
+    "metaDescription": "Explicații de limba engleză cu exemple practice.",
+    "continut": [
+      "Limba engleză e cea mai utilă limbă străină pe care o poți învăța. Gramatică, vocabular, timpuri verbale și exerciții practice.",
+      "Timpurile verbale sunt baza: Present Simple, Past Simple, Present Perfect, Future - fiecare cu reguli clare și exemple.",
+      "Vocabularul se construiește prin practică. Expresii idiomatice, phrasal verbs, diferențe între cuvinte similare - toate în context.",
+      "Explicațiile sunt în română cu exemple în engleză. De la gramatică de bază la pregătire pentru bacalaureat."
+    ]
+  }
+]

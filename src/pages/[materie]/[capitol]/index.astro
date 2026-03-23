@@ -1,0 +1,85 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SEOHead from '../../../components/SEOHead.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import { capitole, materii, getMaterieBySlug, getArticoleForCapitol, getCapitoleForMaterie } from '../../../helpers/data';
+import { buildWebPageSchema, buildBreadcrumbSchema } from '../../../helpers/structured-data';
+
+const PAGE_SIZE = 50;
+
+export function getStaticPaths() {
+  return capitole.map(c => ({
+    params: { materie: c.materieSlug, capitol: c.slug },
+    props: { capitol: c },
+  }));
+}
+
+const { capitol } = Astro.props;
+const materie = getMaterieBySlug(capitol.materieSlug)!;
+const articole = getArticoleForCapitol(capitol.materieSlug, capitol.slug);
+const pageArticole = articole.slice(0, PAGE_SIZE);
+const totalPages = Math.ceil(articole.length / PAGE_SIZE);
+const baseUrl = `/${capitol.materieSlug}/${capitol.slug}`;
+const siblingCapitole = getCapitoleForMaterie(capitol.materieSlug).filter(c => c.slug !== capitol.slug);
+---
+
+<Layout>
+  <SEOHead
+    slot="head"
+    title={capitol.metaTitle}
+    description={capitol.metaDescription}
+    canonical={`${baseUrl}/`}
+    jsonLd={[
+      buildWebPageSchema(capitol.metaTitle, capitol.metaDescription, `${baseUrl}/`),
+      buildBreadcrumbSchema([{ label: 'Acasă', href: '/' }, { label: materie.nume, href: `/${materie.slug}/` }, { label: capitol.nume }]),
+    ]}
+  />
+  {totalPages > 1 && <link slot="head" rel="next" href={`https://explicate.ro${baseUrl}/p/2/`} />}
+
+  <div class="wrap-sm py-8">
+    <Breadcrumb items={[{ label: materie.nume, href: `/${materie.slug}/` }, { label: capitol.nume }]} />
+
+    <div class="mb-8">
+      <p class="text-sm text-pri-600 font-medium mb-1">{materie.nume}</p>
+      <h1 class="text-2xl sm:text-3xl font-display font-bold text-gray-900 mb-2">{capitol.nume} - {materie.nume}</h1>
+      <p class="text-gray-500 text-sm">{articole.length} explicații</p>
+    </div>
+
+    <div class="content mb-10">
+      {capitol.continut.map(p => <p>{p}</p>)}
+    </div>
+
+    <div class="space-y-2 mb-10">
+      {pageArticole.map(a => (
+        <a href={`/${a.materieSlug}/${a.capitolSlug}/${a.slug}/`} class="group flex items-center justify-between border border-gray-200 rounded-md px-4 py-3 no-underline hover:border-pri-300 transition-colors">
+          <span class="text-sm font-medium text-gray-800 group-hover:text-pri-600 transition-colors">{a.titlu}</span>
+          <svg class="w-4 h-4 text-gray-300 group-hover:text-pri-400 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      ))}
+    </div>
+
+    {totalPages > 1 && (
+      <nav class="flex items-center justify-center gap-2 mb-12" aria-label="Paginare">
+        <span class="w-9 h-9 flex items-center justify-center rounded-md text-sm font-medium bg-pri-600 text-white">1</span>
+        {Array.from({ length: Math.min(totalPages - 1, 6) }, (_, i) => (
+          <a href={`${baseUrl}/p/${i + 2}/`} class="w-9 h-9 flex items-center justify-center rounded-md text-sm font-medium text-gray-600 hover:bg-gray-100 no-underline">{i + 2}</a>
+        ))}
+        {totalPages > 7 && <span class="text-gray-400 px-1">...</span>}
+        <a href={`${baseUrl}/p/2/`} class="btn-ghost text-sm no-underline px-4 py-2">Următoarea →</a>
+      </nav>
+    )}
+
+    {siblingCapitole.length > 0 && (
+      <section class="pt-8 border-t border-gray-100">
+        <h2 class="text-sm font-display font-semibold text-gray-400 uppercase tracking-wider mb-3">Alte capitole din {materie.nume}</h2>
+        <div class="flex flex-wrap gap-2">
+          {siblingCapitole.map(c => (
+            <a href={`/${materie.slug}/${c.slug}/`} class="pill pill-pri no-underline hover:bg-pri-100">{c.nume}</a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</Layout>

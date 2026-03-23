@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEOHead from '../../components/SEOHead.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { materii, getCapitoleForMaterie, getArticoleForCapitol, getArticoleForMaterie } from '../../helpers/data';
+import { buildWebPageSchema, buildBreadcrumbSchema } from '../../helpers/structured-data';
+import Icon from '../../components/Icon.astro';
+
+export function getStaticPaths() {
+  return materii.map(m => ({ params: { materie: m.slug }, props: { materie: m } }));
+}
+
+const { materie } = Astro.props;
+const capitole = getCapitoleForMaterie(materie.slug);
+const totalArticole = getArticoleForMaterie(materie.slug).length;
+---
+
+<Layout>
+  <SEOHead
+    slot="head"
+    title={materie.metaTitle}
+    description={materie.metaDescription}
+    canonical={`/${materie.slug}/`}
+    jsonLd={[
+      buildWebPageSchema(materie.metaTitle, materie.metaDescription, `/${materie.slug}/`),
+      buildBreadcrumbSchema([{ label: 'Acasă', href: '/' }, { label: materie.nume }]),
+    ]}
+  />
+
+  <div class="wrap-sm py-8">
+    <Breadcrumb items={[{ label: materie.nume }]} />
+
+    <!-- Header -->
+    <header class="mb-10">
+      <div class="w-12 h-12 rounded-xl bg-pri-50 text-pri-500 flex items-center justify-center mb-4">
+        <Icon name={materie.slug} size={26} />
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-display font-bold text-gray-900 mb-2">{materie.nume} - Explicații și Exerciții</h1>
+      <p class="text-gray-500">{totalArticole} explicații organizate în {capitole.length} capitole, de la noțiuni de bază la bacalaureat</p>
+    </header>
+
+    <!-- Pillar content -->
+    <div class="content mb-12">
+      {materie.continut.map(p => <p>{p}</p>)}
+    </div>
+
+    <!-- Stats -->
+    <div class="flex items-center gap-6 sm:gap-10 mb-12 py-5 border-y border-gray-100">
+      <div class="text-center">
+        <p class="text-2xl font-display font-bold text-pri-600">{capitole.length}</p>
+        <p class="text-xs text-gray-400">capitole</p>
+      </div>
+      <div class="text-center">
+        <p class="text-2xl font-display font-bold text-pri-600">{totalArticole}</p>
+        <p class="text-xs text-gray-400">explicații</p>
+      </div>
+    </div>
+
+    <!-- Table of contents -->
+    <nav class="mb-12 border border-gray-200 rounded-lg p-5">
+      <h2 class="text-sm font-display font-semibold text-gray-400 uppercase tracking-wider mb-3">Capitole</h2>
+      <ol class="space-y-2">
+        {capitole.map((c, i) => {
+          const count = getArticoleForCapitol(materie.slug, c.slug).length;
+          return (
+            <li>
+              <a href={`/${materie.slug}/${c.slug}/`} class="flex items-center justify-between text-sm no-underline text-gray-700 hover:text-pri-600 py-1">
+                <span><span class="text-gray-400 mr-2">{i + 1}.</span>{c.nume}</span>
+                <span class="text-xs text-gray-400">{count} explicații</span>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
+
+    <!-- Each capitol with articles -->
+    {capitole.map((c, i) => {
+      const articole = getArticoleForCapitol(materie.slug, c.slug);
+      return (
+        <section id={c.slug} class="mb-14">
+          <div class="flex items-baseline gap-3 mb-2">
+            <span class="text-sm font-display font-bold text-pri-500">{String(i + 1).padStart(2, '0')}</span>
+            <h2 class="text-xl font-display font-bold text-gray-900">{c.nume}</h2>
+          </div>
+          <p class="text-gray-500 text-sm mb-3 ml-9">{c.descriere}</p>
+          <p class="text-gray-500 text-sm mb-5 ml-9">{articole.length} explicații · <a href={`/${materie.slug}/${c.slug}/`} class="text-pri-600 hover:text-pri-800 no-underline">Vezi capitolul complet →</a></p>
+
+          <div class="ml-9 space-y-1.5">
+            {articole.slice(0, 5).map(a => (
+              <a
+                href={`/${a.materieSlug}/${a.capitolSlug}/${a.slug}/`}
+                class="group flex items-center justify-between py-2.5 px-4 -mx-4 rounded-md no-underline hover:bg-gray-50 transition-colors"
+              >
+                <span class="text-sm text-gray-700 group-hover:text-pri-600 transition-colors">{a.titlu}</span>
+                <svg class="w-3.5 h-3.5 text-gray-300 group-hover:text-pri-400 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            ))}
+            {articole.length > 5 && (
+              <a href={`/${materie.slug}/${c.slug}/`} class="block py-2 px-4 -mx-4 text-sm text-pri-600 hover:text-pri-800 no-underline font-medium">
+                Toate cele {articole.length} explicații →
+              </a>
+            )}
+          </div>
+
+          {i < capitole.length - 1 && <hr class="mt-10 border-gray-100" />}
+        </section>
+      );
+    })}
+
+    <!-- Other materii -->
+    <section class="pt-10 border-t border-gray-200">
+      <h2 class="text-sm font-display font-semibold text-gray-400 uppercase tracking-wider mb-4">Alte materii</h2>
+      <div class="flex flex-wrap gap-2">
+        {materii.filter(m => m.slug !== materie.slug).map(m => (
+          <a href={`/${m.slug}/`} class="pill pill-pri no-underline hover:bg-pri-100 transition-colors">
+            {m.nume}
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>

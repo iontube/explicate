@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* --- Fonts: DM Sans + Space Grotesk (via Google CDN, diferit de cuanimale) --- */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwA.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2') format('woff2');
+}
+
+@theme {
+  /* --- Colors: Indigo + Warm Orange --- */
+  --color-pri-50: #eef2ff;
+  --color-pri-100: #e0e7ff;
+  --color-pri-200: #c7d2fe;
+  --color-pri-300: #a5b4fc;
+  --color-pri-400: #818cf8;
+  --color-pri-500: #6366f1;
+  --color-pri-600: #4f46e5;
+  --color-pri-700: #4338ca;
+  --color-pri-800: #3730a3;
+  --color-pri-900: #312e81;
+  --color-pri-950: #1e1b4b;
+
+  --color-acc-300: #fdba74;
+  --color-acc-400: #fb923c;
+  --color-acc-500: #f97316;
+  --color-acc-600: #ea580c;
+
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+
+  /* --- Typography --- */
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* --- Tokens --- */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+/* === Base === */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-white text-gray-700 font-body leading-relaxed text-[15px];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold text-gray-900 leading-snug;
+  }
+
+  a {
+    @apply transition-colors duration-150;
+  }
+
+  ::selection {
+    @apply bg-pri-100 text-pri-900;
+  }
+}
+
+/* === Components === */
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-6xl px-5 lg:px-8;
+  }
+
+  .wrap-sm {
+    @apply mx-auto w-full max-w-3xl px-5 lg:px-8;
+  }
+
+  .pill {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+
+  .pill-pri {
+    @apply bg-pri-50 text-pri-700 border border-pri-200;
+  }
+
+  .pill-acc {
+    @apply bg-orange-50 text-orange-700 border border-orange-200;
+  }
+
+  .link {
+    @apply text-pri-600 hover:text-pri-800 underline decoration-pri-300 hover:decoration-pri-500 underline-offset-2;
+  }
+
+  .btn-pri {
+    @apply inline-flex items-center justify-center gap-2 rounded-md font-medium transition-all duration-150
+           bg-pri-600 text-white px-5 py-2.5 hover:bg-pri-700 active:bg-pri-800
+           focus:outline-none focus:ring-2 focus:ring-pri-400 focus:ring-offset-2 text-sm;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md font-medium transition-all duration-150
+           text-gray-600 px-5 py-2.5 hover:bg-gray-100 active:bg-gray-200
+           focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 text-sm;
+  }
+
+  /* Article content */
+  .content {
+    @apply text-gray-700 leading-[1.8] text-[15px];
+  }
+
+  .content p {
+    @apply mb-5;
+  }
+
+  .content h2 {
+    @apply text-lg font-display font-bold text-gray-900 mt-10 mb-3 pb-2 border-b border-gray-100;
+  }
+
+  .content h3 {
+    @apply text-base font-display font-semibold text-gray-800 mt-6 mb-2;
+  }
+
+  .content ul {
+    @apply mb-5 space-y-2;
+  }
+
+  .content ol {
+    @apply mb-5 space-y-2 list-decimal pl-5;
+  }
+
+  .content li {
+    @apply pl-1;
+  }
+
+  /* Info box */
+  .infobox {
+    @apply border-l-4 border-pri-400 bg-pri-50/50 px-5 py-4 rounded-r-md my-6 text-sm text-gray-700;
+  }
+
+  .warnbox {
+    @apply border-l-4 border-acc-400 bg-orange-50/50 px-5 py-4 rounded-r-md my-6 text-sm text-gray-700;
+  }
+}
+
+/* === Utilities === */
+@layer utilities {
+  .fade-in {
+    animation: fadeUp 0.35s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

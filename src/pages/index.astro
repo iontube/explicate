@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SEOHead from '../components/SEOHead.astro';
+import { materii, getAllArticole, getArticoleCount, getCapitoleForMaterie, getArticoleForCapitol } from '../helpers/data';
+import { buildWebSiteSchema, buildWebPageSchema } from '../helpers/structured-data';
+import Icon from '../components/Icon.astro';
+
+const totalArticole = getAllArticole().length;
+const totalCapitole = materii.reduce((sum, m) => sum + getCapitoleForMaterie(m.slug).length, 0);
+---
+
+<Layout>
+  <SEOHead
+    slot="head"
+    title="explicate.ro - Explicații clare pentru materii școlare"
+    description="Matematică, fizică, chimie, biologie, română, istorie, geografie și informatică. Explicații pe înțelesul tuturor, cu exemple."
+    canonical="/"
+    jsonLd={[buildWebSiteSchema(), buildWebPageSchema('explicate.ro', 'Explicații clare pentru materii școlare', '/')]}
+  />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gray-900 py-20 sm:py-28">
+    <!-- Animated background shapes -->
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-20 -left-20 w-72 h-72 bg-pri-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute top-1/2 right-0 w-96 h-96 bg-pri-600/10 rounded-full blur-3xl" style="animation: pulse 4s ease-in-out infinite 1s;"></div>
+      <div class="absolute -bottom-10 left-1/3 w-64 h-64 bg-acc-500/10 rounded-full blur-3xl" style="animation: pulse 5s ease-in-out infinite 2s;"></div>
+      <!-- Grid pattern -->
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    </div>
+
+    <div class="wrap relative z-10">
+      <div class="max-w-2xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-gray-300 text-sm font-medium">{totalArticole} explicații disponibile</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-5">
+          Explicații pe care chiar le <span class="text-transparent bg-clip-text bg-gradient-to-r from-pri-400 to-acc-400">înțelegi</span>
+        </h1>
+        <p class="text-gray-400 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl mx-auto">
+          Matematică, fizică, chimie, biologie, română, istorie, geografie și informatică. Scrise clar, cu exemple, fără balast.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+          <a href="/matematica/" class="btn-pri text-base px-6 py-3 no-underline">Matematică</a>
+          <a href="/romana/" class="inline-flex items-center justify-center gap-2 rounded-md font-medium text-base text-white/80 border border-white/20 px-6 py-3 hover:bg-white/10 hover:text-white no-underline transition-colors">Limba Română</a>
+          <a href="/fizica/" class="inline-flex items-center justify-center gap-2 rounded-md font-medium text-base text-white/80 border border-white/20 px-6 py-3 hover:bg-white/10 hover:text-white no-underline transition-colors">Fizică</a>
+        </div>
+
+        <div class="flex items-center justify-center gap-8 sm:gap-12 pt-8 border-t border-white/10">
+          <div class="text-center">
+            <p class="text-2xl font-display font-bold text-white">{materii.length}</p>
+            <p class="text-xs text-gray-500 mt-0.5">materii</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-display font-bold text-white">{totalCapitole}</p>
+            <p class="text-xs text-gray-500 mt-0.5">capitole</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-display font-bold text-white">{totalArticole}</p>
+            <p class="text-xs text-gray-500 mt-0.5">explicații</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats inline in hero bottom -->
+
+  <!-- Materii grid -->
+  <section class="wrap py-16 sm:py-20">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl font-display font-bold text-gray-900 mb-2">Alege materia</h2>
+      <p class="text-gray-500">Fiecare materie e organizată pe capitole, fiecare capitol pe explicații individuale</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {materii.map(m => {
+        const count = getArticoleCount(m.slug);
+        const caps = getCapitoleForMaterie(m.slug);
+        return (
+          <a href={`/${m.slug}/`} class="group block border border-gray-200 rounded-xl p-6 no-underline hover:border-pri-300 hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-lg bg-pri-50 text-pri-500 flex items-center justify-center mb-4">
+              <Icon name={m.slug} size={22} />
+            </div>
+            <h3 class="font-display font-bold text-gray-900 group-hover:text-pri-600 transition-colors mb-1.5">{m.nume}</h3>
+            <p class="text-sm text-gray-500 mb-4 leading-relaxed">{m.descriere}</p>
+            <div class="flex items-center gap-3 text-xs text-gray-400">
+              <span>{caps.length} capitole</span>
+              <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+              <span>{count} explicații</span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- Preview: top articles per materie -->
+  <section class="bg-gray-50 py-16 sm:py-20">
+    <div class="wrap">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl font-display font-bold text-gray-900 mb-2">Cele mai căutate explicații</h2>
+        <p class="text-gray-500">Din fiecare materie, cele mai populare întrebări</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {materii.slice(0, 6).map(m => {
+          const firstCap = getCapitoleForMaterie(m.slug)[0];
+          if (!firstCap) return null;
+          const articles = getArticoleForCapitol(m.slug, firstCap.slug).slice(0, 2);
+          return articles.map(a => (
+            <a href={`/${a.materieSlug}/${a.capitolSlug}/${a.slug}/`} class="group flex items-start gap-3 bg-white border border-gray-200 rounded-lg px-4 py-3.5 no-underline hover:border-pri-300 transition-colors">
+              <span class="text-pri-400 shrink-0 mt-0.5"><Icon name={m.slug} size={18} /></span>
+              <div class="min-w-0">
+                <span class="text-sm font-medium text-gray-800 group-hover:text-pri-600 transition-colors block">{a.titlu}</span>
+                <span class="text-xs text-gray-400">{m.nume}</span>
+              </div>
+            </a>
+          ));
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="wrap py-16 sm:py-20">
+    <div class="text-center max-w-lg mx-auto">
+      <h2 class="text-2xl font-display font-bold text-gray-900 mb-3">Nu găsești ce cauți?</h2>
+      <p class="text-gray-500 mb-6">Adăugăm explicații noi în fiecare săptămână. Navighează prin materii sau folosește căutarea.</p>
+      <div class="flex flex-wrap justify-center gap-2">
+        {materii.map(m => (
+          <a href={`/${m.slug}/`} class="pill pill-pri no-underline hover:bg-pri-100 transition-colors">
+            {m.nume}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

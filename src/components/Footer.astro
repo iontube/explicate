@@ -1,0 +1,22 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-gray-200 mt-20">
+  <div class="wrap py-10">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div>
+        <a href="/" class="font-display font-bold text-gray-900 no-underline">
+          explicate<span class="text-pri-500">.ro</span>
+        </a>
+        <p class="text-gray-400 text-sm mt-1">Explicații pe înțelesul tuturor.</p>
+      </div>
+      <nav class="flex flex-wrap gap-4 text-sm text-gray-400">
+        <a href="/contact/" class="hover:text-gray-700 no-underline">Contact</a>
+        <a href="/confidentialitate/" class="hover:text-gray-700 no-underline">Confidențialitate</a>
+        <a href="/termeni/" class="hover:text-gray-700 no-underline">Termeni</a>
+      </nav>
+    </div>
+    <p class="text-gray-300 text-xs mt-6">&copy; {year} explicate.ro</p>
+  </div>
+</footer>

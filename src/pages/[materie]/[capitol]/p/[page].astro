@@ -1,0 +1,81 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import SEOHead from '../../../../components/SEOHead.astro';
+import Breadcrumb from '../../../../components/Breadcrumb.astro';
+import { capitole, getMaterieBySlug, getArticoleForCapitol } from '../../../../helpers/data';
+
+export function getStaticPaths() {
+  const PAGE_SIZE = 50;
+  const paths = [];
+  for (const c of capitole) {
+    const articole = getArticoleForCapitol(c.materieSlug, c.slug);
+    const totalPages = Math.ceil(articole.length / PAGE_SIZE);
+    for (let page = 2; page <= totalPages; page++) {
+      paths.push({
+        params: { materie: c.materieSlug, capitol: c.slug, page: String(page) },
+        props: {
+          capitol: c,
+          pageArticole: articole.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE),
+          currentPage: page,
+          totalPages,
+          totalArticole: articole.length,
+        },
+      });
+    }
+  }
+  return paths;
+}
+
+const { capitol, pageArticole, currentPage, totalPages, totalArticole } = Astro.props;
+const materie = getMaterieBySlug(capitol.materieSlug)!;
+const baseUrl = `/${capitol.materieSlug}/${capitol.slug}`;
+const prevUrl = currentPage === 2 ? `${baseUrl}/` : `${baseUrl}/p/${currentPage - 1}/`;
+const nextUrl = currentPage < totalPages ? `${baseUrl}/p/${currentPage + 1}/` : null;
+---
+
+<Layout>
+  <SEOHead
+    slot="head"
+    title={`${capitol.nume} - ${materie.nume} - Pagina ${currentPage}`}
+    description={`${capitol.nume} - pagina ${currentPage} din ${totalPages}.`}
+    canonical={`${baseUrl}/p/${currentPage}/`}
+  />
+  <Fragment slot="head">
+    <link rel="prev" href={`https://explicate.ro${prevUrl}`} />
+    {nextUrl && <link rel="next" href={`https://explicate.ro${nextUrl}`} />}
+  </Fragment>
+
+  <div class="wrap-sm py-8">
+    <Breadcrumb items={[
+      { label: materie.nume, href: `/${materie.slug}/` },
+      { label: capitol.nume, href: `${baseUrl}/` },
+      { label: `Pagina ${currentPage}` },
+    ]} />
+
+    <div class="mb-8">
+      <h1 class="text-2xl font-display font-bold text-gray-900 mb-2">{capitol.nume}</h1>
+      <p class="text-gray-500 text-sm">Pagina {currentPage} din {totalPages} · {totalArticole} explicații</p>
+    </div>
+
+    <div class="space-y-2 mb-10">
+      {pageArticole.map(a => (
+        <a href={`/${a.materieSlug}/${a.capitolSlug}/${a.slug}/`} class="group flex items-center justify-between border border-gray-200 rounded-md px-4 py-3 no-underline hover:border-pri-300 transition-colors">
+          <span class="text-sm font-medium text-gray-800 group-hover:text-pri-600 transition-colors">{a.titlu}</span>
+          <svg class="w-4 h-4 text-gray-300 group-hover:text-pri-400 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      ))}
+    </div>
+
+    <nav class="flex items-center justify-center gap-2 mb-12" aria-label="Paginare">
+      <a href={prevUrl} class="btn-ghost text-sm no-underline px-4 py-2">← Înapoi</a>
+      <span class="text-sm text-gray-500">{currentPage} / {totalPages}</span>
+      {nextUrl ? (
+        <a href={nextUrl} class="btn-ghost text-sm no-underline px-4 py-2">Următoarea →</a>
+      ) : (
+        <span class="btn-ghost text-sm px-4 py-2 opacity-40">Următoarea →</span>
+      )}
+    </nav>
+  </div>
+</Layout>

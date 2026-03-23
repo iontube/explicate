@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://explicate.ro/sitemap-index.xml
