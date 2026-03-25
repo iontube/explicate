@@ -14,7 +14,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = resolve(__dirname, '../dist');
 const SITE_URL = 'https://explicate.ro';
 
-const START_DATE = '2026-03-22';
+const START_DATE = '2026-03-25';
 
 const metaPath = resolve(distDir, 'sitemaps/meta.json');
 if (!existsSync(metaPath)) {
