@@ -1,5 +1,7 @@
 ---
-const year = new Date().getFullYear();
+const now = new Date();
+const year = now.getFullYear();
+const updated = now.toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 
 <footer class="border-t border-gray-200 mt-20">
@@ -18,6 +20,6 @@ const year = new Date().getFullYear();
         <a href="/termeni/" class="hover:text-gray-700 no-underline">Termeni</a>
       </nav>
     </div>
-    <p class="text-gray-300 text-xs mt-6">&copy; {year} explicate.ro</p>
+    <p class="text-gray-300 text-xs mt-6">&copy; {year} explicate.ro · Actualizat {updated}</p>
   </div>
 </footer>

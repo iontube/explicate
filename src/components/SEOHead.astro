@@ -12,6 +12,7 @@ const { title, description, canonical, noindex = false, jsonLd = [] } = Astro.pr
 const site = 'https://explicate.ro';
 const fullCanonical = canonical ? `${site}${canonical}` : `${site}${Astro.url.pathname}`;
 const fullTitle = title.length > 50 ? title : `${title} | explicate.ro`;
+const now = new Date().toISOString();
 ---
 
 <title>{fullTitle}</title>
@@ -20,6 +21,7 @@ const fullTitle = title.length > 50 ? title : `${title} | explicate.ro`;
 {noindex ? <meta name="robots" content="noindex" /> : <meta name="robots" content="index, follow" />}
 
 <meta property="og:type" content="website" />
+<meta property="article:modified_time" content={now} />
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={fullCanonical} />
